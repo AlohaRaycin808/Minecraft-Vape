@@ -1,6 +1,7 @@
 package com.chimericdream.athenaeum;
 
 import com.chimericdream.athenaeum.loot.AthenaeumLootFunctionTypes;
+import com.chimericdream.athenaeum.loot.AthenaeumLootTables;
 import com.chimericdream.athenaeum.registries.AthenaeumRegistries;
 import com.google.common.base.Supplier;
 import com.google.common.base.Suppliers;
@@ -16,6 +17,7 @@ public final class AthenaeumMod {
     public static void init() {
         AthenaeumRegistries.init();
         AthenaeumLootFunctionTypes.register();
+        AthenaeumLootTables.init();
         AthenaeumReloadListener.register();
     }
 }

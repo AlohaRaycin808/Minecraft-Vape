@@ -81,4 +81,8 @@ public class GetRandomBookFunction extends ConditionalLootFunction {
 
         return stack;
     }
+
+    public static ConditionalLootFunction.Builder<?> builder() {
+        return builder((list) -> new GetRandomBookFunction(list, Optional.empty(), Optional.empty()));
+    }
 }
