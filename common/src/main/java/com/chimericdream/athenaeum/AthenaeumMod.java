@@ -1,9 +1,15 @@
 package com.chimericdream.athenaeum;
 
+import com.chimericdream.athenaeum.loot.AthenaeumLootFunctionTypes;
+import com.chimericdream.athenaeum.registries.AthenaeumRegistries;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public final class AthenaeumMod {
-    public static final String MOD_ID = "athenaeum";
+    public static final Logger LOGGER = LoggerFactory.getLogger("athenaeum");
 
     public static void init() {
-        // Write common init code here.
+        AthenaeumRegistries.init();
+        AthenaeumLootFunctionTypes.register();
     }
 }

@@ -2,6 +2,10 @@ plugins {
     id 'com.github.johnrengelman.shadow'
 }
 
+loom {
+    accessWidenerPath = file("src/main/resources/athenaeum.accesswidener")
+}
+
 architectury {
     platformSetupLoomIde()
     fabric()
